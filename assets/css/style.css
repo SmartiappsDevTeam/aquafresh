@@ -72,7 +72,82 @@ html, body {
   height: 100%;
   font-family: "Nunito", sans-serif;
 }
-.paragraph-style {
+.paragraph-style {.component-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust columns as needed */
+  gap: 10px; /* Adjust gap between items */
+}
+
+.component-item {
+  text-align: center;
+}
+
+.component-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+.component-item p {
+  margin-top: 5px; /* Adjust spacing between image and label */
+  font-size: 14px;
+  color: #555; /* Adjust text color */
+}
+      .sidebar-content {
+          padding: 20px;
+          background-color: #85b6ca;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+          color: #fff;
+      }
+      .sidebar-content h5, li,ul a {
+          margin-bottom: 15px;
+          color: #fff;
+      }
+      .sidebar-content img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+      }
+
+      .main-content {
+          padding: 20px;
+          color: #fff;
+          background-color: white;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+      }
+      .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  max-height: 200px; /* Limit maximum height to avoid overflow */
+}
+
+.product h4 {
+  margin-top: auto; /* Push the heading to the bottom */
+}
+
+.carousel-item img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+      }
   list-style-type: none;
   padding-left: 25px;
 }
@@ -195,7 +270,7 @@ body {
 }
 
 .page-nav {
-  background-image: url('/images/slider/s1.jpg');
+  background-image: url('/assets/images/slider/s1.jpg');
   background-size: 100%;
   padding: 68px;
   text-align: center;
@@ -628,7 +703,7 @@ body {
 }
 
 footer .inner {
-  background-color: #24abbd;
+  background-color: #3599a7;
   padding: 50px;
   color: #fff;
   font-size: 0.9rem;
@@ -839,3 +914,81 @@ header {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.component-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust columns as needed */
+  gap: 10px; /* Adjust gap between items */
+}
+
+.component-item {
+  text-align: center;
+}
+
+.component-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+.component-item p {
+  margin-top: 5px; /* Adjust spacing between image and label */
+  font-size: 14px;
+  color: #555; /* Adjust text color */
+}
+      .sidebar-content {
+          padding: 20px;
+          background-color: #85b6ca;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+          color: #fff;
+      }
+      .sidebar-content h5, li,ul a {
+          margin-bottom: 15px;
+          color: #fff;
+      }
+      .sidebar-content img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+      }
+
+      .main-content {
+          padding: 20px;
+          color: #fff;
+          background-color: white;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+      }
+      .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  max-height: 200px; /* Limit maximum height to avoid overflow */
+}
+
+.product h4 {
+  margin-top: auto; /* Push the heading to the bottom */
+}
+
+.carousel-item img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+      }
