@@ -1164,3 +1164,39 @@ header {
   padding: 0 20px; /* Adjusted padding for horizontal space */
 }
 
+
+/*** Footer Start ***/
+.footer {
+  background: #3599a7;
+}
+
+.footer .footer-item a {
+  line-height: 35px;
+  color: #FFF;
+  transition: 0.5s;
+}
+
+.footer .footer-item p {
+  line-height: 35px;
+  color: #FFF;
+}
+
+.footer .footer-item a:hover {
+  letter-spacing: 1px;
+  color: var(--bs-primary);
+}
+
+.footer .footer-item .footer-btn a,
+.footer .footer-item .footer-btn a i {
+  transition: 0.5s;
+  
+}
+
+.footer .footer-item .footer-btn a:hover {
+  background: var(--bs-white);
+}
+
+.footer .footer-item .footer-btn a:hover i {
+  color: var(--bs-primary) !important;
+}
+/*** Footer End ***/
