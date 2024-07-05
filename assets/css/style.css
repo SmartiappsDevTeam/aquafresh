@@ -916,27 +916,32 @@ header {
 /*# sourceMappingURL=style.css.map */
 
 
+.sidebar-content {
+  margin-bottom: 30px; /* Adjust margin as per your design */
+}
+
 .component-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Adjust columns as needed */
-  gap: 10px; /* Adjust gap between items */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Adjust gap between components */
 }
 
 .component-item {
-  text-align: center;
+  width: calc(50% - 7.5px); /* Adjust width for two items in a row */
+  margin-bottom: 15px; /* Adjust margin between rows */
+  position: relative;
 }
 
 .component-item img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  border-radius: 8px; /* Optional: Add border-radius to images */
 }
 
 .component-item p {
-  margin-top: 5px; /* Adjust spacing between image and label */
-  font-size: 14px;
-  color: #555; /* Adjust text color */
+  text-align: center;
+  margin-top: 10px; /* Adjust spacing between image and text */
+  font-weight: bold; /* Optional: Add bold font weight to text */
 }
       .sidebar-content {
           padding: 20px;
@@ -1119,4 +1124,43 @@ header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
-  
+  /* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: auto; /* Adjusted width to fit content */
+  height: 60px;
+  right: 10px; /* Position on the right side */
+  bottom: 10px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 30px; /* Adjusted border-radius */
+  text-align: center;
+  font-size: 18px;
+  z-index: 100;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.whatsapp-float .my-float {
+  font-size: 35px;
+  color: #ffffff; /* Icon color */
+  margin-top: 12px; /* Adjusted margin-top */
+  margin-right: 10px; /* Added margin-right for spacing */
+}
+
+.whatsapp-float .chat-text {
+  display: inline-block;
+  vertical-align: middle; /* Align text vertically */
+  margin-top: 12px; /* Adjusted margin-top */
+  margin-bottom: 12px; /* Added margin-bottom for spacing */
+}
+
+.whatsapp-float a {
+  color: #FFF;
+  text-decoration: none;
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  height: 100%; /* Ensure the link fills the container */
+  padding: 0 20px; /* Adjusted padding for horizontal space */
+}
+
