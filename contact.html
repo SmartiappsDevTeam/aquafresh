@@ -64,54 +64,60 @@
         <!-- ##################### Our Products Starts Here #################### -->
            
        
-          <div class="row contact-rooo big-paddingg no-margin">
+        <div class="row contact-rooo big-paddingg no-margin">
             <div class="container">
-               <div class="row">
-
-
-                <div style="padding:20px" class="col-sm-7">
-                <u><h2 class="fs-4 fw-bold" >Contact Form</h2> <br></u>
-                    <div class="row cont-row">
-                        <div  class="col-sm-3"><label>Your Name </label><span>:</span></div>
-                        <div class="col-sm-8"><input type="text" value="" placeholder="Enter Name" name="name" class="form-control input-sm"  ></div>
-                    </div>
-                    <div  class="row cont-row">
-                        <div  class="col-sm-3"><label>Email Address </label><span>:</span></div>
-                        <div class="col-sm-8"><input type="text" value="" name="email" placeholder="Enter Email Address" class="form-control input-sm"  ></div>
-                    </div>
-                     <div  class="row cont-row">
-                        <div  class="col-sm-3"><label>Mobile Number</label><span>:</span></div>
-                        <div class="col-sm-8"><input type="text" value="" name="phone" placeholder="Enter Mobile Number" class="form-control input-sm"  ></div>
-                    </div>
-                     <div  class="row cont-row">
-                        <div  class="col-sm-3"><label>Enter Message</label><span>:</span></div>
-                        <div class="col-sm-8">
-                          <textarea rows="5" placeholder="Enter Your Message" name="message" class="form-control input-sm"></textarea>
+                <div class="row">
+                    <!-- Contact Form -->
+                    <form class="form-contact contact_form col-md-7" action="mail.php" method="post" novalidate="novalidate">
+                        <u><h2 class="fs-4 fw-bold">Contact Form</h2><br></u>
+                        <div class="row cont-row mb-3">
+                            <label class="col-sm-3 col-form-label">Your Name <span>:</span></label>
+                            <div class="col-sm-9">
+                                <input type="text" placeholder="Enter Name" name="name" class="form-control input-sm">
+                            </div>
                         </div>
-                    </div>
-                     <div style="margin-top:10px;" class="row">
-                        <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
-                        <div class="col-sm-8">
-                            <button type="submit" class="btn fw-bolder px-4 py-2" style="background-color: #e28149; color: #ffffff;">Send Message</button>
-                         
+                        <div class="row cont-row mb-3">
+                            <label class="col-sm-3 col-form-label">Email Address <span>:</span></label>
+                            <div class="col-sm-9">
+                                <input type="text" name="email" placeholder="Enter Email Address" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="row cont-row mb-3">
+                            <label class="col-sm-3 col-form-label">Mobile Number <span>:</span></label>
+                            <div class="col-sm-9">
+                                <input type="number" name="phone" placeholder="Enter Mobile Number" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="row cont-row mb-3">
+                            <label class="col-sm-3 col-form-label">Enter Message <span>:</span></label>
+                            <div class="col-sm-9">
+                                <textarea rows="5" placeholder="Enter Your Message" name="message" class="form-control input-sm"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-9 offset-sm-3">
+                                <button type="submit" class="btn fw-bolder px-4 py-2" style="background-color: #e28149; color: #ffffff;">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+        
+                    <!-- Address Section -->
+                    <div class="col-md-5">
+                        <div class="address-section mt-4">
+                            <u><h2 class="fs-4 fw-bold">Address</h2></u>
+                            <p>
+                                AQUA FRESH X <br>
+                                7/9 Malliga Nagar 4th Street,<br>
+                                Jayam Flats, C.Pallavaram, Chennai-43<br>
+                                Phone: +91 8610821183, 9025127985<br>
+                                Email: aquafreshx58@gmail.com
+                            </p>
                         </div>
                     </div>
                 </div>
-                 <div class="col-sm-5">    
-                      <div style="margin:50px" class="serv"> 
-                      <u>  <h2 class="fs-4 fw-bold" style="margin-top:10px;">Address</h2></u>
-                        AQUA FRESH X <br>
-                        7/9 Malliga Nagar 4th Street,<br>
-                        Jayam Flats,C.Pallavarm,Chennai-43<br>
-                        Phone:+91 8610821183,9025127985<br>
-                        Email:aquafreshx58@gmail.com<br>
-                        
-
-                   </div>    
-                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+        
           <div style="margin-top:0px;" class="row no-margin">
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1909866729925!2d80.15601637065403!3d12.9596275872183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525e4146d21f15%3A0x59587d5ee21bdc81!2s4th%2C%209%2C%20Malliga%20Nagar%2C%20Krishnapuram%2C%20Pallavaram%2C%20Chennai%2C%20Tamil%20Nadu%20600043!5e0!3m2!1sen!2sin!4v1720074820544!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
