@@ -1248,3 +1248,15 @@ header {
 .justify-text {
   text-align: justify;
 }
+
+.address-section p {
+  font-family: Arial, sans-serif; /* Change font-family as desired */
+  font-size: 16px; /* Adjust font size */
+  line-height: 1.6; /* Adjust line height for better readability */
+  margin-top: 10px; /* Adjust margin top as needed */
+}
+
+.address-section i {
+  margin-right: 5px; /* Add margin between icon and text */
+}
+
