@@ -1215,3 +1215,6 @@ header {
   color: var(--bs-primary) !important;
 }
 /*** Footer End ***/
+.justify-text {
+  text-align: justify;
+}
