@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //Recipients
     $mail->setFrom('no-reply@smartiapps.com');
-    $mail->addAddress('iswarya@smartiapps.com');
+    $mail->addAddress('aquafreshx58@gmail.com');
     //$mail->addAddress('iconicresearchtechnology@gmail.com');  // Add a recipient
 
     // Content
