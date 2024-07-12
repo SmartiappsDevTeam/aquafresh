@@ -21,6 +21,105 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
         </head>
+        <style>
+              .carousel-inner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bubble-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -50px;
+            width: 20px;
+            height: 20px;
+            background: rgba(88, 160, 189, 0.5);
+            border-radius: 50%;
+            animation: rise 7s infinite ease-in-out;
+            opacity: 0;
+        }
+
+        .bubble:nth-child(2) {
+            width: 30px;
+            height: 30px;
+            animation-duration: 9s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 10px;
+            height: 10px;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 25px;
+            height: 25px;
+            animation-duration: 6s;
+            animation-delay: 3s;
+        }
+
+        .bubble:nth-child(5) {
+            width: 15px;
+            height: 15px;
+            animation-duration: 8s;
+            animation-delay: 4s;
+        }
+
+        @keyframes rise {
+            0% {
+                bottom: -50px;
+                transform: translateX(0);
+                opacity: 0;
+            }
+            30% {
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(30px);
+            }
+            100% {
+                bottom: 100%;
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+        }
+
+        .animated-text span {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .animated-text.active span {
+            opacity: 1;
+        }
+
+        .btn-white {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .zoom-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-effect:hover {
+    transform: scale(1.05); /* Scale up by 5% on hover */
+}
+
+        </style>
         <body class="bg-white">
            
           <header>
@@ -39,7 +138,13 @@
                                 <ul class="fw-bold nacul fs-7">
                                     <li class="float-start p-3 px-4"><a href="index.html">HOME</a></li>
                                     <li class="float-start p-3 px-4"><a href="about.html">ABOUT US</a></li>
-                                    <li class="float-start p-3 px-4"><a href="products.html">OUR PRODUCTS</a></li>
+                                    <li class="float-start p-3 px-4 dropdown">
+                                        <a href="#" class="dropdown-toggle" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">OUR PRODUCTS</a>
+                                        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                                            <li><a class="dropdown-item" href="products.html">RO PRODUCTS</a></li>
+                                            <li><a class="dropdown-item" href="spare.html">RO SPARE PARTS</a></li>
+                                        </ul>
+                                    </li>
                                     <li class="float-start p-3 px-4"><a href="services.html">OUR SERVICES</a></li>
                                     <li class="float-start p-3 px-4"><a href="contact.html">CONTACT US</a></li>
                                     
@@ -54,118 +159,164 @@
            
        <!-- ##################### Slider Starts Here #################### -->
             
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active ">
-                  <img src="assets/images/slider/s1.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption   d-md-block">
-                      <div class="row">
-                           <div class="col-lg-6 animate__animated  animate__bounceInLeft text-start ">
-                              <h1 class="fs-12 fw-bolder text-start ">AquaFreshx  <br><span class="text-primary">RO Purifiers</span> </h1> 
-                              <h3 class="text-dark d-none d-md-block text-start">“Advanced Water Purification for Healthier Living” </h3>
-                              <div class="d-inline-block pt-5 text-start d-none d-lg-block">
-                                <a href="contact.html" class="btn btn-primary shadow fs-5 fw-bolder px-5 py-2">Book Now</a>
-
-                                <a href="services.html" class="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2">Our Services</a>
-                              </div>
-                           </div>
-                           <div class="col-lg-6 animate__animated animate__bounceInRight d-none d-lg-block">
-                               <img class="w-100" src="assets/images/sp1.jpg" alt="">
-                           </div>
-                      </div>
-                  </div>
+       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="inactive"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="aactive"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- First Slide (Active) -->
+            <div class="carousel-item active">
+                <img src="assets/images/slider/AQUA FRESH X WATER PURIFIER (1).png" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-md-block">
+                    <div class="row">
+                        <div class="col-lg-6 animate__animated animate__bounceInLeft text-start">
+                            <h1 class="fs-12 fw-bolder text-start text-white animated-text">
+                                <span>A</span><span>Q</span><span>U</span><span>A</span><span>F</span><span>R</span><span>E</span><span>S</span><span>H</span><span>X</span>
+                                <br>
+                                <span class="text-primary animated-text">RO Purifiers</span>
+                            </h1>
+                            <h3 class="text-dark d-none d-md-block text-start">“Advanced Water Purification for Healthier Living”</h3>
+                            <div class="d-inline-block pt-5 text-start d-none d-lg-block">
+                                <a href="contact.html" class="btn btn-primary btn-white ms-4 shadow fs-5 fw-bolder px-5 py-2">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 animate__animated animate__bounceInRight d-none d-lg-block">
+                            <img class="w-100" src="assets/images/" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item ">
-                  <img src="assets/images/slider/s2.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption  d-md-block">
-                      <div class="row">
-                           <div class="col-lg-6  animate__animated  animate__bounceInLeft">
-                              <h1 class="fs-12 fw-bolder text-start">Aqua Filter <br><span class="text-primary">Services</span> </h1> 
-                              <p class="d-none d-md-block text-dark text-start"> Beyond delivering exceptional water filtration, we provide essential components, scheduled maintenance, and precise membrane replacements."</p>
-                              <div class="d-inline-block pt-5 text-start d-none d-lg-block">
-                                  <button class="btn btn-primary shadow fs-5 fw-bolder px-5 py-2">Our Products</button>
-                                  <button class="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2">Book Now</button>
-                              </div>
-                           </div>
-                           <div class="col-lg-6 animate__animated animate__bounceInRight d-none d-lg-block">
-                              <img class="w-100" src="assets/images/sp2.png" alt="">
-                           </div>
-                            
-                      </div>
-                  </div>
+            </div>
+            <div class="carousel-item inactive">
+                <img src="assets/images/slider/Add a subheading (6).png" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-md-block">
+                    <div class="row">
+                        <div class="col-lg-6 animate__animated animate__bounceInRight"> <!-- Keep animation classes -->
+                            <h3 class="fs-12 fw-bolder text-start text-white animated-text">
+                                <span>R</span><span>E</span><span>L</span><span>I</span><span>A</span><span>B</span><span>L</span><span>E</span>&nbsp;&nbsp;<span>S</span><span>P</span><span>A</span><span>R</span><span>E</span>
+                                <br> <span>P</span><span>A</span><span>R</span><span>T</span><span>S</span>
+                                <span class="text-primary animated-text">Always At Aquafreshx</span>
+                            </h3>
+                            <div class="d-inline-block pt-5 text-start d-none d-lg-block">
+                                <a href="services.html" class="btn btn-outline-primary btn-white ms-4 shadow fs-5 fw-bolder px-5 py-2">Our Services</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <img class="w-100" src="assets/images/" alt="">
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="bi fs-4 text-dark bi-chevron-left"></i></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"><i class="bi fs-4 text-dark bi-chevron-right"></i></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
             
             
+            <div class="carousel-item aactive">
+                <img src="assets/images/slider/s1.jpg" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-md-block">
+                    <div class="row">
+                        <div class="col-lg-6 animate__animated animate__bounceInLeft text-start">
+                            <h3><span class="text-primary animated-text">Complete Solution For </span></h3>
+                            <h1 class="fs-12 fw-bolder text-start text-primary animated-text">
+                              
+                                
+                                <span>D</span><span>o</span><span>m</span><span>e</span><span>s</span><span>t</span><span>i</span><span>c</span> <span>&</span> <br><span>C</span><span>o</span><span>m</span><span>m</span><span>e</span><span>r</span><span>c</span><span>i</span><span>a</span><span>l</span>
+ 
+                                
+                                
+                                
+                                
+                                
+                            </h1>
+                            
+                            <div class="d-inline-block pt-5 text-start d-none d-lg-block">
+                                <a href="contact.html" class="btn btn-outline-primary btn-white ms-4 shadow fs-5 fw-bolder px-5 py-2">Book Now</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+           
+            
+            
+    
+           
+    
+            <!-- Bubble Animation Container -->
+            <div class="bubble-container">
+                <div class="bubble" style="left: 20%;"></div>
+                <div class="bubble" style="left: 40%;"></div>
+                <div class="bubble" style="left: 60%;"></div>
+                <div class="bubble" style="left: 80%;"></div>
+                <div class="bubble" style="left: 30%;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel({
+                interval: 2000 // Adjust the interval to control the speed of the carousel
+            });
+        });
+    </script>
             <!-- ##################### Why Choos US #################### -->
-             <div class="container-fluid products bg-gray big-padding pt-3">
-               <div class="container-xl">
-                   <div class="section-title row">
+            <div class="container-fluid products bg-gray big-padding pt-3">
+                <div class="container-xl">
+                    <div class="section-title row">
                         <h2 class="fs-1 fw-bold">AQUA FRESH X</h2>
                         <p>"Transform your water experience with AquafreshX! We offer a full suite of services including the latest water purification technology, high-quality components, routine maintenance, and professional membrane changes. Our solutions ensure your system operates at peak performance, providing you with clean, fresh water at all times. Trust AquafreshX for dependable water quality and comprehensive care, keeping your water pure and your system running smoothly."</p>
                     </div>
-                   <div class="row mt-5">
-                       <div class="col-lg-4 mb-4 col-md-6">
-                           <div class="cover text-center p-4 shadow-md bg-white">
-                               <img class="w-125" src="assets/images/services/flood.png" alt="">
-                               <h2 class="fs-4 fw-bolder mt-4">Residential RO installation</h2>
-                               <p>Enjoy pure, clean water at home with our expert Residential RO Installation Service.</p>
-                           </div>
-                       </div>
-                       <div class="col-lg-4 mb-4 col-md-6">
-                           <div class="cover text-center p-4 shadow-md bg-white">
-                               <img class="w-125" src="assets/images/services/002-drink-water.png" alt="">
-                               <h2 class="fs-4 fw-bolder mt-4">Commercial RO installation</h2>
-                               <p>From restaurants to industrial facilities, trust our experienced team.</p>
-                           </div>
-                       </div>
+                    <div class="row mt-5">
                         <div class="col-lg-4 mb-4 col-md-6">
-                           <div class="cover text-center p-4 shadow-md bg-white">
-                               <img class="w-125" src="assets/images/services/001-save-water.png" alt="">
-                               <h2 class="fs-4 fw-bolder mt-4">Water TDS Test</h2>
-                               <p>Ensuring water meets regulatory standards and tastes acceptable. </p>
-                           </div>
-                       </div>
-                       <div class="col-lg-4 mb-4 col-md-6">
-                           <div class="cover text-center p-4 shadow-md bg-white">
-                               <img class="w-125" src="assets/images/services/water-tap.png" alt="">
-                               <h2 class="fs-4 fw-bolder mt-4">Relocation Service</h2>
-                               <p>Uninstalling the system from the current location and installing it at the new location. </p>
-                           </div>
-                       </div>
-                       <div class="col-lg-4 mb-4 col-md-6">
-                           <div class="cover text-center p-4 shadow-md bg-white">
-                               <img class="w-125" src="assets/images/services/water-heater.png" alt="">
-                               <h2 class="fs-4 fw-bolder mt-4">Components replacements</h2>
-                               <p>Regularly replacing worn-out or outdated components helps prevent breakdowns, extends the lifespan of machinery.</p>
-                           </div>
-                       </div>
-                       <div class="col-lg-4 mb-4 col-md-6">
-                           <div class="cover text-center p-4 shadow-md bg-white">
-                               <img class="w-125" src="assets/images/services/ph.png" alt="">
-                               <h2 class="fs-4 fw-bolder mt-4">Maintenance Service</h2>
-                               <p>AquafreshX provides top-tier maintenance services tailored specifically for RO systems. </p>
-                           </div>
-                       </div>
-                       
-                   </div>
-               </div>
-           </div>
-           
+                            <div class="cover text-center p-4 shadow-md bg-info zoom-effect">
+                                <img class="w-125" src="assets/images/services/flood.png" alt="">
+                                <h2 class="fs-4 fw-bolder mt-4">Residential RO Installation</h2>
+                                <p>Enjoy pure, clean water at home with our expert Residential RO Installation Service.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 col-md-6">
+                            <div class="cover text-center p-4 shadow-md bg-white zoom-effect">
+                                <img class="w-125" src="assets/images/services/002-drink-water.png" alt="">
+                                <h2 class="fs-4 fw-bolder mt-4">Commercial RO Installation</h2>
+                                <p>From restaurants to industrial facilities, trust our experienced team.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 col-md-6">
+                            <div class="cover text-center p-4 shadow-md bg-info zoom-effect">
+                                <img class="w-125" src="assets/images/services/001-save-water.png" alt="">
+                                <h2 class="fs-4 fw-bolder mt-4">Water TDS Test</h2>
+                                <p>Ensuring water meets regulatory standards and tastes acceptable.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 col-md-6">
+                            <div class="cover text-center p-4 shadow-md bg-white zoom-effect">
+                                <img class="w-125" src="assets/images/services/water-tap.png" alt="">
+                                <h2 class="fs-4 fw-bolder mt-4">Relocation Service</h2>
+                                <p>Uninstalling the system from the current location and installing it at the new location.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 col-md-6">
+                            <div class="cover text-center p-4 shadow-md bg-info text-light zoom-effect">
+                                <img class="w-125" src="assets/images/services/water-heater.png" alt="">
+                                <h2 class="fs-4 fw-bolder mt-4">Components Replacements</h2>
+                                <p>Regularly replacing worn-out or outdated components helps prevent breakdowns and extends the lifespan of machinery.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4 col-md-6">
+                            <div class="cover text-center p-4 shadow-md bg-white zoom-effect">
+                                <img class="w-125" src="assets/images/services/ph.png" alt="">
+                                <h2 class="fs-4 fw-bolder mt-4">Maintenance Service</h2>
+                                <p>AquafreshX provides top-tier maintenance services tailored specifically for RO systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
            
             <!-- ******************** About US Starts Here ******************* -->
 
@@ -427,7 +578,24 @@
               
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function() {
+  var animateText = function(selector) {
+    var letters = $(selector).children('span');
+    letters.each(function(index) {
+      $(this).delay(index * 200).animate({ opacity: 1 }, 500);
+    });
+  };
 
+  animateText('#carouselExampleIndicators .carousel-item.active .animated-text');
+
+  $('#carouselExampleIndicators').on('slid.bs.carousel', function() {
+    animateText('#carouselExampleIndicators .carousel-item.active .animated-text');
+  });
+});
+</script>
 
         </body>
         <script src="assets/js/jquery-3.2.1.min.js"></script>

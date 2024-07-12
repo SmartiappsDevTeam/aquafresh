@@ -18,6 +18,10 @@ Description: This Template is created for Youtubers
 .bg-blue {
   background-color: #24abbd !important;
 }
+.bg-light
+ {
+  background-color: #c2d4d6 !important;
+}
 /* ===================================== Basic CSS ==================================== */
 * {
   margin: 0px;
@@ -933,6 +937,30 @@ header {
   color: #e6e6e6; /* Slightly lighter white on hover */
 }
 
+/* Dropdown menu links */
+#menu-jk .nacul .dropdown-menu a {
+  color: #ffffff; /* White color for dropdown links */
+  padding: 10px 20px; /* Padding for dropdown items */
+  display: block; /* Display as block to fill width */
+  text-decoration: none; /* Remove underline */
+}
+
+#menu-jk .nacul .dropdown-menu a:hover {
+  background-color: #007bff; /* Background color on hover */
+  color: #ffffff; /* White color on hover */
+}
+
+/* Dropdown menu caret color */
+#menu-jk .nacul .dropdown-toggle::after {
+  border-top-color: #ffffff; /* White color for the caret */
+}
+
+/* Adjust dropdown submenu alignment */
+#menu-jk .nacul .dropdown-menu {
+  background-color: #24abbd; /* Dark background for dropdown menu */
+  padding: 10px 0; /* Padding for dropdown menu */
+}
+
 .btn-primary {
   background-color: #24abbd;
   border-color: #24abbd;
@@ -1260,3 +1288,43 @@ header {
   margin-right: 5px; /* Add margin between icon and text */
 }
 
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-letters span {
+  display: inline-block;
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+}
+
+.animated-letters span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.animated-letters span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.animated-letters span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.btn-white {
+    color: #fff; /* Set text color to white */
+    border-color: #fff; /* Set border color to white */
+}
+
+.btn-white:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #007bff; /* Change text color on hover */
+}
+
+    .accordion-item {
+        color: #000 !important; /* Set text color to black */
+    }

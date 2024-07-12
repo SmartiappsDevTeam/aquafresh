@@ -33,7 +33,13 @@
                         <ul class="fw-bold nacul fs-7">
                             <li class="float-start p-3 px-4"><a href="index.html">HOME</a></li>
                             <li class="float-start p-3 px-4"><a href="about.html">ABOUT US</a></li>
-                            <li class="float-start p-3 px-4"><a href="products.html">OUR PRODUCTS</a></li>
+                            <li class="float-start p-3 px-4 dropdown">
+                                <a href="#" class="dropdown-toggle" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">OUR PRODUCTS</a>
+                                <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                                    <li><a class="dropdown-item" href="products.html">RO PRODUCTS</a></li>
+                                    <li><a class="dropdown-item" href="spare.html">RO SPARE PARTS</a></li>
+                                </ul>
+                            </li>
                             <li class="float-start p-3 px-4"><a href="services.html">OUR SERVICES</a></li>
                             <li class="float-start p-3 px-4"><a href="contact.html">CONTACT US</a></li>
                         </ul>
@@ -57,11 +63,37 @@
 </div>
 
 <!-- Our Services -->
+
+
+
+
 <div id="services" class="service container-fluid px-4 bg-white py-5">
     <div class="container">
         <div class="section-title row mb-3">
             <h2 class="fw-bolder">AQUA FRESH X GENUINE SERVICES</h2>
             <p>At AquafreshX, we offer comprehensive water purifier installation and repair services.</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="service-type bg-light p-4">
+                        <h3>Domestic Service</h3>
+                        <p>We provide comprehensive RO system solutions tailored for domestic use. Our services ensure your home's water purification needs are met efficiently and effectively. From installation to maintenance and repairs, we offer reliable support to keep your household water supply safe and clean.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-type bg-light p-4">
+                        <h3>Industrial Service</h3>
+                        <p>For industrial settings, we deliver robust RO system solutions designed to handle large-scale water purification demands. Our industrial services focus on maximizing efficiency and minimizing downtime, ensuring continuous operation and compliance with regulatory standards.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-type bg-light p-4">
+                        <h3>Commercial Service</h3>
+                        <p>Our commercial services cater to businesses across various sectors, providing customized RO solutions to meet specific operational needs. Whether it's enhancing water quality in restaurants, offices, or healthcare facilities, we deliver reliable systems and responsive maintenance services to support your business operations.</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="image-container text-center mb-4">
             <img src="assets/images/product/service.png" alt="service">
