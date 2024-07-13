@@ -20,7 +20,11 @@ Description: This Template is created for Youtubers
 }
 .bg-light
  {
-  background-color: #c2d4d6 !important;
+  background-color: #95d6cd !important;
+}
+.bg-green
+ {
+  background-color: #857582 !important;
 }
 /* ===================================== Basic CSS ==================================== */
 * {
